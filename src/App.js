@@ -19,7 +19,7 @@ function App() {
         {/*destaque*/}
         {/*em alta*/}
         {categorias.map((category) => {
-          return <Row/>
+          return <Row key = {category.name} title={category.title} path={category.path}/>
         })}
     </div>
   );
