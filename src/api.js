@@ -34,7 +34,7 @@ const categorias = [
     }
 ]
 
-export default getmovies = async (path) => {
+export const getmovies = async (path) => {
     try {
         let url = API_DNS + path
         const response = fetch(url)
@@ -43,6 +43,5 @@ export default getmovies = async (path) => {
         console.log("ERROR getMovies: ", error)
     }
 
-    return url;
 }
 
