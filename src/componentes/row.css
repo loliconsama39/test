@@ -1,0 +1,32 @@
+.Row-container{
+    margin-bottom: 20px;
+    color: white;
+}
+
+.Row-cards{
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px;
+}
+.Row-cards::-webkit-scrollbar{
+    display: none;
+}
+
+.Movie-card{
+    object-fit: contain;
+    width: 100%;
+    max-height: 100px;
+    margin-bottom: 10px;
+    transition: transform 450ms;
+}
+.Movie-card-large{
+    object-fit: contain;
+    width: 100%;
+    max-height: 250px;
+    margin-bottom: 10px;
+    transition: transform 450ms;
+}
+.Movie-card:hover{
+    transform: scale(1.08)
+}

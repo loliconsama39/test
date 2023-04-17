@@ -1,5 +1,8 @@
 import React, { useEffect } from "react";
 import {getMovies} from './api'
+import './row.css'
+
+const imagehost = "";
 
 function Row([title,path]){
     const [movies,setMovies] = React.useState([]);
@@ -14,15 +17,22 @@ function Row([title,path]){
         }
         
     }
+
     useEffect(()=>{
         fetchMovies(path)
     },[path]);
+
     return (
         <div className="Row-container">
             <h2 className="Row-header">{title}</h2>
             <div className="Row-cards">
                 {movies?.map((movie) => {
-                    return<img key={movie.id}>{movie.original_title}</img>
+                    return(<img 
+                        className={"Movie-card ${isLarge &&} Movie-card-large"} 
+                        key={movie.id} 
+                        src={imagehost + movie.poster_path} 
+                        alt={movie.name}
+                        ></img>);
                 })}
             </div>
         </div>
