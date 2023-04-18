@@ -26,7 +26,10 @@ function banner(){
         
     return(
         <header className='banner-container'
-        style={{}}>
+        style={{
+            backgroundSize:'cover',
+            backgroundImage:'url($())',
+            roundPosition:'center-center'}}>
 
         </header>
     )
