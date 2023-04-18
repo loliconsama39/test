@@ -4,7 +4,7 @@ import './row.css'
 
 const imagehost = "";
 
-function Row([title,path]){
+function Row([title,path,isLarge]){
     const [movies,setMovies] = React.useState([]);
     
     const fetchMovies = async (_path) => {
@@ -28,7 +28,7 @@ function Row([title,path]){
             <div className="Row-cards">
                 {movies?.map((movie) => {
                     return(<img 
-                        className={"Movie-card ${isLarge &&} Movie-card-large"} 
+                        className={`movie-card ${isLarge && "movie-card-large"}` } 
                         key={movie.id} 
                         src={imagehost + movie.poster_path} 
                         alt={movie.name}
