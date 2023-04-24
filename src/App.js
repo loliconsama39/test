@@ -2,7 +2,8 @@ import './App.css';
 //import { useEffect } from 'react';
 import {categorias} from '/.api';
 import Row from './componentes/row.js';
-import banner from './componentes/banner';
+import Nav from './componentes/nav';
+import Banner from './componentes/banner';
 
 function App() {
 
@@ -19,7 +20,8 @@ function App() {
         {/*navbar*/}
         {/*destaque*/}
         {/*em alta*/}
-        <banner></banner>
+        <Nav/>
+        <Banner/>
         {categorias.map((category) => {
           return <Row key = {category.name} title={category.title} path={category.path} isLarge={category.isLarge}/>
         })}
