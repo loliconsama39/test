@@ -20,8 +20,8 @@ function App() {
         {/*navbar*/}
         {/*destaque*/}
         {/*em alta*/}
-        <Nav/>
-        <Banner/>
+        <Nav></Nav>
+        <Banner></Banner>
         {categorias.map((category) => {
           return <Row key = {category.name} title={category.title} path={category.path} isLarge={category.isLarge}/>
         })}

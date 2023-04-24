@@ -32,7 +32,7 @@ function Banner(){
         <header className='banner-container'
         style={{
             backgroundSize:'cover',
-            backgroundImage:'url("${}")',
+            backgroundImage:`url("https://image.tmdb.org/t/p/original${movie.backdrop_path}")`,
             roundPosition:'center-center'
             }}>
         
@@ -40,12 +40,14 @@ function Banner(){
             <h1 className='banner-title'>
                 {movie?.title || movie?.name || movie?.original_name}
             </h1>
-            <div className='banner-button'>
-                assistir
-            </div>
-            <div className='banner-button'>
-                minha lista
-            </div>
+            <div className='banner-button-container'>
+                    <div className='banner-button'>
+                        Assistir
+                    </div>
+                    <div className='banner-button'>
+                        Minha Lista
+                    </div> 
+                </div>
             <div className='banner_description'>
                 <h2> {truncate(movie?.overview, 100)} </h2>
             </div>
